@@ -1,0 +1,228 @@
+ALGORITHME devineNombre
+{Mini-jeu afin de faire deviner un nombre secret}
+
+VARIABLES nbUtilisateur:entier
+           nbmystere:entier
+           resultat:booleen
+           count:entier
+
+DEBUT
+    nbmystere=19
+    resultat=FAUX
+    count<-0
+    
+    
+    
+    TANT QUE count < 10 ET resultat==FAUX FAIRE
+        afficher ("un nombre entre 1 et 100")
+        saisir (nbUtilisateur)
+      
+        SI nbUtilisateur = nbmystere ALORS
+            resultat=VRAI 
+            afficher ("Vous avez gagné !")
+        FIN SI 
+
+
+        SI count = 10 ET resultat=FAUX ALORS
+            afficher ("Vous avez perdu !")
+        FIN SI
+
+        SI nbUtilisateur < nbmystere ALORS 
+            afficher ("plus grand")
+        FIN SI
+
+        SI nbUtilisateur > nbmystere
+            afficher("plus petit")
+        FIN SI
+
+
+    count<- count +1 
+    
+    FIN TANT QUE 
+    
+    
+FIN 
+
+
+ALGORITHME valeurPositive
+
+VARIABLES   valeur:entier
+
+DEBUT
+
+valeur=9
+
+    afficher(Donnez une valeur positive non nulle)
+        saisir (valeur)
+
+        
+    TANT QUE valeur <=0 FAIRE
+        afficher(Donnez une valeur positive non nulle)
+        saisir (valeur)
+
+
+    FIN TANT QUE
+
+FIN
+
+
+ALGORITHME somme500
+
+VARIABLES val1:entier
+          val2:entier  
+DEBUT
+
+val1=0
+
+
+TANT QUE val1<=500 ALORS
+    afficher("donner une valeur")
+    saisir (val2)
+    val1 <- (val1 +val2)
+FIN TANT QUE
+
+
+
+FIN
+
+
+
+
+ALGORITHME somme500
+
+VARIABLES val1:entier
+          val2:entier  
+DEBUT
+
+val1=0
+
+    REPETER 
+        afficher ("donner une valeur)
+        saisir (val2)
+        val1<- val1 + val2
+    TANT QUE val1 <= 500
+
+FIN
+
+FONCTION calcul (nombre1,nombre2)
+{calcul du produit de deux nombres}
+
+VARIABLES produit: entier
+
+DEBUT
+
+    produit <- nombre1 x nombre2
+    RETOURNER produit
+
+FIN
+
+ALGORITHME main
+{programme pour afficher une table de multiplication}
+
+VARIABLES valeur,count, resultat:entier
+
+DEBUT
+    afficher ("donner une valeur")
+    saisir (valeur)
+        count=1
+        TANT QUE count <=10
+            resultat=calcul(valeur,count)
+            afficher (valeur,"x",count,"egal",resultat)
+            count <- count + 1
+            
+        FIN TANT QUE
+
+
+FIN        
+
+
+
+PROCEDURE calculSomme(nombre1,nombre2)
+{calcul de la somme de deux nombre}
+
+VARIABLE somme:entier
+
+DEBUT 
+    somme <- nombre1 + nombre2
+        SI somme >= 0 ALORS
+            afficher ("la somme est Positive")
+        SINON
+            afficher ("la somme est Négative")
+        FIN SI
+
+FIN
+
+PROCEDURE calculProduit (nombre1,nombre2)
+{calcul du produits de deux nombres}
+
+VARIABLE produit: entier
+
+DEBUT
+    produit <- nombre1 x nombre2
+       SI produit >= 0 ALORS
+            afficher ("le produit est Positif")
+        SINON
+            afficher ("le produit est Négatif") 
+        FIN SI
+
+FIN
+
+
+
+
+
+
+
+ALGORITHME calculdesnombres
+{calcul puis positifs ou négatifs}
+
+VARIABLE nombre1,nombre2:entier
+
+DEBUT
+
+
+
+    afficher("rentrer deux nombres")
+    saisir (nombre1,nombre2)
+    calculSomme (nombre1,nombre2)
+    calculProduit (nombre1,nombre2)
+
+
+        
+FIN
+
+
+ALGORITHME tableaudenotes
+{algorithme servant a rentrer les notes d'étudiants dans un tableau}
+
+
+VARIABLE    count,note: entier
+            Tableau monTableau[5],note:Chaine
+
+DEBUT
+
+    POUR count <- 0 à longueur (monTableau) - 1 FAIRE
+        afficher ("rentrer la note")
+        saisir (note)
+        monTableau[count]=note
+    FIN POUR
+FIN
+
+
+ALGORITHME tableauutilisateur
+{algorithme pour créer un tableau de la taille demandé par l'utilisateur}
+
+VARIABLE valeur, valeur2,i:entier
+        tableau[valeur]
+DEBUT
+    afficher ("veuillez entrer une valeur")
+    saisir (valeur)
+    monTableau[valeur]
+        POUR i <-0 à monTableau -1 FAIRE
+        saisir (valeur2)
+            monTableau
+        
+        FIN POUR
+    
+
+FIN
